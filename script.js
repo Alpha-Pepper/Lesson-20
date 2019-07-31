@@ -1,36 +1,30 @@
 "use strict";
 
 function fib(n){
-    if(n <= 0){
-        return  0;
+    let a = 1, b = 1;
+    for (let i = 3; i<= n; i++){
+        let c = a + b;
+        a = b;
+        b = c;
     }
-    else if(n == 1){
-        return 1;
-    }else{
-        return fib(n - 1) + fib(n - 2);
-    }
+    return b;
 }
-console.log(fib(1));
-console.log(fib(2));
-console.log(fib(3));
-console.log(fib(4));
-console.log(fib(5));
-console.log(fib(6));
-console.log(fib(7));
-console.log(fib(8));
-console.log(fib(9));
 
-let num;
+console.log(fib(10));
 
-let i = 2;
 
-function f(x,n){
-    if(n != 1){
-        return num = f(x,n-1) / i;
-    }else{
-        return x;
-    }
+
+
+
+function f(x){
+    let num;
+  for(let i = 0; x > 50; i++){
+      num = i + 1,
+      x = x / 2;
+  }
+  return num
 }
-f(1000,6);
-console.log(num);
+
+console.log(f(1000));
+
 
